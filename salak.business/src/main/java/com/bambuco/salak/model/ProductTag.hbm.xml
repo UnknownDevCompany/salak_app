@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 28/05/2016 09:59:11 PM by Hibernate Tools 5.1.0.Alpha1 -->
+<hibernate-mapping>
+    <class name="com.bambuco.salak.model.ProductTag" table="product_tag" schema="public" optimistic-lock="version">
+        <id name="idProductTag" type="int">
+            <column name="id_product_tag" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="product" class="com.bambuco.salak.model.Product" fetch="select">
+            <column name="id_product" not-null="true" />
+        </many-to-one>
+        <many-to-one name="tag" class="com.bambuco.salak.model.Tag" fetch="select">
+            <column name="id_tag" not-null="true" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>
