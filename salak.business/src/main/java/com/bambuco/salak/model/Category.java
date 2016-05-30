@@ -1,9 +1,8 @@
 package com.bambuco.salak.model;
-// Generated 29/05/2016 10:31:16 AM by Hibernate Tools 5.1.0.Alpha1
+// Generated 29/05/2016 09:49:36 PM by Hibernate Tools 5.1.0.Alpha1
 
 import java.util.HashSet;
 import java.util.Set;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -18,7 +17,7 @@ import javax.persistence.Table;
 @Table(name = "category", schema = "public")
 public class Category implements java.io.Serializable {
 
-	private int idCategory;
+	private Long idCategory;
 	private String name;
 	private boolean state;
 	private Set<Product> products = new HashSet<Product>(0);
@@ -26,13 +25,13 @@ public class Category implements java.io.Serializable {
 	public Category() {
 	}
 
-	public Category(int idCategory, String name, boolean state) {
+	public Category(Long idCategory, String name, boolean state) {
 		this.idCategory = idCategory;
 		this.name = name;
 		this.state = state;
 	}
 
-	public Category(int idCategory, String name, boolean state, Set<Product> products) {
+	public Category(Long idCategory, String name, boolean state, Set<Product> products) {
 		this.idCategory = idCategory;
 		this.name = name;
 		this.state = state;
@@ -42,11 +41,11 @@ public class Category implements java.io.Serializable {
 	@Id
 
 	@Column(name = "id_category", unique = true, nullable = false)
-	public int getIdCategory() {
+	public Long getIdCategory() {
 		return this.idCategory;
 	}
 
-	public void setIdCategory(int idCategory) {
+	public void setIdCategory(Long idCategory) {
 		this.idCategory = idCategory;
 	}
 

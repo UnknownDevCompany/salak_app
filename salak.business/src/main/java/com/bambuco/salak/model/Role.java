@@ -1,9 +1,8 @@
 package com.bambuco.salak.model;
-// Generated 29/05/2016 10:31:16 AM by Hibernate Tools 5.1.0.Alpha1
+// Generated 29/05/2016 09:49:36 PM by Hibernate Tools 5.1.0.Alpha1
 
 import java.util.HashSet;
 import java.util.Set;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;

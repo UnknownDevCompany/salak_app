@@ -1,29 +1,37 @@
 package com.bambuco.salak.dao.impl;
-// Generated 29/05/2016 10:31:16 AM by Hibernate Tools 5.1.0.Alpha1
 
-import javax.ejb.Stateless;
+import java.io.Serializable;
+
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
+import org.hibernate.usertype.ParameterizedType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.bambuco.salak.model.Option;
+import com.bambuco.salak.dao.BaseDAO;
 
 /**
- * Home object for domain model class Option.
- * @see com.bambuco.salak.model.Option
- * @author Hibernate Tools
+ * 
+ * @author PC
+ *
+ * @param <E>
+ * @param <K>
  */
-@Stateless
-public class OptionHome {
+public class BaseDAOImpl<E, K extends Serializable> implements BaseDAO<E, K> {
 
-	private final static Logger log = LoggerFactory.getLogger(OptionHome.class);
+	private static final Logger log = LoggerFactory.getLogger(BaseDAOImpl.class);
+	protected Class entityClass;
 
 	@PersistenceContext
 	private EntityManager entityManager;
 
-	public void persist(Option transientInstance) {
+	public BaseDAOImpl() {
+		ParameterizedType genericSuperclass = (ParameterizedType) getClass().getGenericSuperclass();
+		this.entityClass = genericSuperclass.getClass();
+	}
+
+	public void persist(E transientInstance) {
 		log.debug("persisting Option instance");
 		try {
 			entityManager.persist(transientInstance);
@@ -34,7 +42,7 @@ public class OptionHome {
 		}
 	}
 
-	public void remove(Option persistentInstance) {
+	public void remove(E persistentInstance) {
 		log.debug("removing Option instance");
 		try {
 			entityManager.remove(persistentInstance);
@@ -45,10 +53,10 @@ public class OptionHome {
 		}
 	}
 
-	public Option merge(Option detachedInstance) {
+	public E merge(E detachedInstance) {
 		log.debug("merging Option instance");
 		try {
-			Option result = entityManager.merge(detachedInstance);
+			E result = entityManager.merge(detachedInstance);
 			log.debug("merge successful");
 			return result;
 		} catch (RuntimeException re) {
@@ -57,10 +65,10 @@ public class OptionHome {
 		}
 	}
 
-	public Option findById(int id) {
+	public E findById(K id) {
 		log.debug("getting Option instance with id: " + id);
 		try {
-			Option instance = entityManager.find(Option.class, id);
+			E instance = (E) entityManager.find(entityClass, id);
 			log.debug("get successful");
 			return instance;
 		} catch (RuntimeException re) {
@@ -68,4 +76,5 @@ public class OptionHome {
 			throw re;
 		}
 	}
+
 }
