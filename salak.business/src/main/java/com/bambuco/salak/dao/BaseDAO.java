@@ -1,9 +1,6 @@
 package com.bambuco.salak.dao;
 
 import java.io.Serializable;
-import java.util.List;
-
-import com.bambuco.salak.model.Option;
 
 /**
  * Interfaz generica para el acceso a datos

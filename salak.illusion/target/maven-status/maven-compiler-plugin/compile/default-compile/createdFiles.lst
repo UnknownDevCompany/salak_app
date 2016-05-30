@@ -1,0 +1,10 @@
+com\bambuco\salak\illusion\dto\Product.class
+com\bambuco\salak\illusion\dto\RoleOption.class
+com\bambuco\salak\illusion\dto\Role.class
+com\bambuco\salak\illusion\dto\ProductTag.class
+com\bambuco\salak\illusion\dto\Option.class
+com\bambuco\salak\illusion\dto\User.class
+com\bambuco\salak\illusion\dto\Category.class
+com\bambuco\salak\illusion\dto\Module.class
+com\bambuco\salak\illusion\SimpleService.class
+com\bambuco\salak\illusion\dto\Tag.class

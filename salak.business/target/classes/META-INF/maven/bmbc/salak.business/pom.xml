@@ -7,7 +7,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>salak.business</name>
+	<name>Salak Business</name>
 	<url>http://maven.apache.org</url>
 
 	<properties>
@@ -53,15 +53,6 @@
 			<artifactId>ejb-api</artifactId>
 			<version>3.0</version>
 		</dependency>
-
-		<!-- http://mvnrepository.com/artifact/com.googlecode.genericdao/genericdao-parent -->
-		<dependency>
-			<groupId>com.googlecode.genericdao</groupId>
-			<artifactId>genericdao-parent</artifactId>
-			<version>1.1.0</version>
-			<type>pom</type>
-		</dependency>
-
 
 	</dependencies>
 
