@@ -1,8 +1,8 @@
-package com.bambuco.salak.model;
+package com.bambucodev.salak.model;
 // Generated 29/05/2016 09:49:36 PM by Hibernate Tools 5.1.0.Alpha1
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -20,7 +20,7 @@ public class Module implements java.io.Serializable {
 	private int idModule;
 	private String name;
 	private boolean state;
-	private Set<Option> options = new HashSet<Option>(0);
+	private List<Option> options = new ArrayList<Option>(0);
 
 	public Module() {
 	}
@@ -31,7 +31,7 @@ public class Module implements java.io.Serializable {
 		this.state = state;
 	}
 
-	public Module(int idModule, String name, boolean state, Set<Option> options) {
+	public Module(int idModule, String name, boolean state, List<Option> options) {
 		this.idModule = idModule;
 		this.name = name;
 		this.state = state;
@@ -68,11 +68,11 @@ public class Module implements java.io.Serializable {
 	}
 
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "module")
-	public Set<Option> getOptions() {
+	public List<Option> getOptions() {
 		return this.options;
 	}
 
-	public void setOptions(Set<Option> options) {
+	public void setOptions(List<Option> options) {
 		this.options = options;
 	}
 

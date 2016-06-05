@@ -1,8 +1,8 @@
-package com.bambuco.salak.model;
+package com.bambucodev.salak.model;
 // Generated 29/05/2016 09:49:36 PM by Hibernate Tools 5.1.0.Alpha1
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -23,7 +23,7 @@ public class Role implements java.io.Serializable {
 	private boolean state;
 	private String description;
 	private RoleOption roleOption;
-	private Set<User> users = new HashSet<User>(0);
+	private List<User> users = new ArrayList<User>(0);
 
 	public Role() {
 	}
@@ -34,7 +34,7 @@ public class Role implements java.io.Serializable {
 		this.state = state;
 	}
 
-	public Role(int idRole, String name, boolean state, String description, RoleOption roleOption, Set<User> users) {
+	public Role(int idRole, String name, boolean state, String description, RoleOption roleOption, List<User> users) {
 		this.idRole = idRole;
 		this.name = name;
 		this.state = state;
@@ -91,11 +91,11 @@ public class Role implements java.io.Serializable {
 	}
 
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "role")
-	public Set<User> getUsers() {
+	public List<User> getUsers() {
 		return this.users;
 	}
 
-	public void setUsers(Set<User> users) {
+	public void setUsers(List<User> users) {
 		this.users = users;
 	}
 

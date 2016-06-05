@@ -1,8 +1,8 @@
-package com.bambuco.salak.model;
+package com.bambucodev.salak.model;
 // Generated 29/05/2016 09:49:36 PM by Hibernate Tools 5.1.0.Alpha1
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -24,7 +24,7 @@ public class Option implements java.io.Serializable {
 	private String name;
 	private String value;
 	private Boolean state;
-	private Set<RoleOption> roleOptions = new HashSet<RoleOption>(0);
+	private List<RoleOption> roleOptions = new ArrayList<RoleOption>(0);
 
 	public Option() {
 	}
@@ -34,7 +34,7 @@ public class Option implements java.io.Serializable {
 		this.module = module;
 	}
 
-	public Option(int idOption, Module module, String name, String value, Boolean state, Set<RoleOption> roleOptions) {
+	public Option(int idOption, Module module, String name, String value, Boolean state, List<RoleOption> roleOptions) {
 		this.idOption = idOption;
 		this.module = module;
 		this.name = name;
@@ -92,11 +92,11 @@ public class Option implements java.io.Serializable {
 	}
 
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "option")
-	public Set<RoleOption> getRoleOptions() {
+	public List<RoleOption> getRoleOptions() {
 		return this.roleOptions;
 	}
 
-	public void setRoleOptions(Set<RoleOption> roleOptions) {
+	public void setRoleOptions(List<RoleOption> roleOptions) {
 		this.roleOptions = roleOptions;
 	}
 

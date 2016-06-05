@@ -1,8 +1,8 @@
-package com.bambuco.salak.model;
+package com.bambucodev.salak.model;
 // Generated 29/05/2016 09:49:36 PM by Hibernate Tools 5.1.0.Alpha1
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -20,7 +20,7 @@ public class Category implements java.io.Serializable {
 	private Long idCategory;
 	private String name;
 	private boolean state;
-	private Set<Product> products = new HashSet<Product>(0);
+	private List<Product> products = new ArrayList<Product>(0);
 
 	public Category() {
 	}
@@ -31,7 +31,7 @@ public class Category implements java.io.Serializable {
 		this.state = state;
 	}
 
-	public Category(Long idCategory, String name, boolean state, Set<Product> products) {
+	public Category(Long idCategory, String name, boolean state, List<Product> products) {
 		this.idCategory = idCategory;
 		this.name = name;
 		this.state = state;
@@ -68,11 +68,11 @@ public class Category implements java.io.Serializable {
 	}
 
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "category")
-	public Set<Product> getProducts() {
+	public List<Product> getProducts() {
 		return this.products;
 	}
 
-	public void setProducts(Set<Product> products) {
+	public void setProducts(List<Product> products) {
 		this.products = products;
 	}
 

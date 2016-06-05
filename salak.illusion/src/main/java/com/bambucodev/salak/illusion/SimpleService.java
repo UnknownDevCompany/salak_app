@@ -17,7 +17,7 @@
  * under the License.
  */
 
-package com.bambuco.salak.illusion;
+package com.bambucodev.salak.illusion;
 
 public class SimpleService {
 	
