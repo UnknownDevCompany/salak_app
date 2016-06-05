@@ -1,4 +1,4 @@
-package com.bambuco.salak.dao;
+package com.bambucodev.salak.dao;
 
 import java.io.Serializable;
 

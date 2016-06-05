@@ -1,8 +1,8 @@
-package com.bambuco.salak.dao;
+package com.bambucodev.salak.dao;
 
 import javax.ejb.Local;
 
-import com.bambuco.salak.model.RoleOption;
+import com.bambucodev.salak.model.RoleOption;
 
 /**
  * 

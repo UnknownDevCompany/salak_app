@@ -1,4 +1,4 @@
-package com.bambuco.salak.dao.impl;
+package com.bambucodev.salak.dao.impl;
 
 import java.io.Serializable;
 
@@ -9,7 +9,7 @@ import org.hibernate.usertype.ParameterizedType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.bambuco.salak.dao.BaseDAO;
+import com.bambucodev.salak.dao.BaseDAO;
 
 /**
  * 
@@ -24,7 +24,7 @@ public class BaseDAOImpl<E, K extends Serializable> implements BaseDAO<E, K> {
 	protected Class entityClass;
 
 	@PersistenceContext
-	private EntityManager entityManager;
+	protected EntityManager entityManager;
 
 	public BaseDAOImpl() {
 		ParameterizedType genericSuperclass = (ParameterizedType) getClass().getGenericSuperclass();
