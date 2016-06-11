@@ -1,26 +1,81 @@
-<html lang="en">
-  <head>
-    <meta name="google-signin-scope" content="profile email">
-    <meta name="google-signin-client_id" content="674242743069-mpq0sqb48p281comdscmq0070uc1i6q2.apps.googleusercontent.com">
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
-  </head>
-  <body>
-    <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
-    <script>
-      function onSignIn(googleUser) {
-        // Useful data for your client-side scripts:
-        var profile = googleUser.getBasicProfile();
-        console.log("ID: " + profile.getId()); // Don't send this directly to your server!
-        console.log('Full Name: ' + profile.getName());
-        console.log('Given Name: ' + profile.getGivenName());
-        console.log('Family Name: ' + profile.getFamilyName());
-        console.log("Image URL: " + profile.getImageUrl());
-        console.log("Email: " + profile.getEmail());
+<!DOCTYPE html>
+<html data-ng-app="salak">
+<head>
+<title>Salak</title>
+	<!-- 3d Party Scripts -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+	<!-- Styles -->
+	<link rel="stylesheet" type="text/css" href="../../css/loading-bar.css" /> 
+	<link rel="stylesheet" type="text/css"
+		href="../../css/bootstrap/metal_bootstrap.css">
+</head>
+<body>
+	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<button class="btn btn-success navbar-toggle"
+					data-ng-click="navbarExpanded = !navbarExpanded">
+					<span class="glyphicon glyphicon-chevron-down"></span>
+				</button>
+				<a class="navbar-brand" href="#/">Home</a>
+			</div>
+			<div class="collapse navbar-collapse" data-ng-controller="indexController" data-collapse="!navbarExpanded">
+				<ul class="nav navbar-nav navbar-right">
+					<li data-ng-show="authentication.isAuth"><a href="#">Welcome {{firstName}}</a></li>
+					<li data-ng-show="authentication.isAuth"><a href="#/orders">My
+							Orders</a></li>
+					<li data-ng-show="authentication.isAuth"><a href=""
+						data-ng-click="logOut()">Logout</a></li>
+					<li data-ng-hide="authentication.isAuth"><a href="#/login">Login</a></li>
+					<li data-ng-hide="authentication.isAuth"><a href="#/signup">Sign
+							Up</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="jumbotron">
+		<div class="container">
+			<div class="page-header text-center">
+				<h1>..i..</h1>
+			</div>
+			<p>Lalalalallalallalala.</p>
+		</div>
+	</div>
+	
+	<!-- PARTIALS -->
+	<div class="container">
+		<div data-ng-view></div>
+	</div>
+	
+	<hr />
+	<div id="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<p class="text-muted">
+						Powered by Bambuco Dev: <a target="_blank"
+							href="https://bambucodev.wordpress.com/">hi!</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
 
-        // The ID token you need to pass to your backend:
-        var id_token = googleUser.getAuthResponse().id_token;
-        console.log("ID Token: " + id_token);
-      };
-    </script>
-  </body>
+	<!--Third Party Scripts-->
+	<script src="../../js/loading-bar.js"></script>
+	<script src="../../js/angular-route.js"></script>
+	<!-- Load app main script -->
+	<script src="../../js/custom/app.js"></script>
+ 	<!-- Load services -->
+<!-- 	<script src="../../js/custom/service/authInterceptorService.js"></script> -->
+<!-- 	<script src="../../js/custom/service/authService.js"></script> -->
+ 	<script src="../../js/custom/service/ordersService.js"></script> 
+	<!-- Load controllers --> 
+	<script src="../../js/custom/controller/indexController.js"></script>
+	<script src="../../js/custom/controller/homeController.js"></script>
+	<script src="../../js/custom/controller/loginController.js"></script>
+	<script src="../../js/custom/controller/signupController.js"></script>
+	<script src="../../js/custom/controller/ordersController.js"></script>
+
+</body>
 </html>
