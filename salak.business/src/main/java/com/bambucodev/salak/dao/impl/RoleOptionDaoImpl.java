@@ -1,21 +1,18 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.bambucodev.salak.dao.impl;
 
-import com.bambucodev.salakapp.model.RoleOption;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
+import com.bambucodev.salak.dao.RoleOptionDao;
+import com.bambucodev.salak.model.RoleOption;
+
 /**
  *
  * @author Ing. Jefferson Pérez Cervera <www.expertla.com>
- */
+ */	
 @Stateless
-public class RoleOptionDaoImpl extends BaseDaoImpl<RoleOption> {
+public class RoleOptionDaoImpl extends BaseDaoImpl<RoleOption> implements RoleOptionDao {
     @PersistenceContext(unitName = "SalakAppPU")
     private EntityManager em;
 
