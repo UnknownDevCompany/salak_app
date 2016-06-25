@@ -1,7 +1,5 @@
 package com.bambucodev.salak.business.impl;
 
-import java.util.List;
-
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
 
@@ -10,6 +8,7 @@ import org.apache.logging.log4j.Logger;
 
 import com.bambucodev.salak.business.UserBusiness;
 import com.bambucodev.salak.dao.BaseDao;
+import com.bambucodev.salak.dao.UserDao;
 import com.bambucodev.salak.model.User;
 
 /**
@@ -26,7 +25,7 @@ public class UserBusinessImpl extends BaseBusinessImpl<User> implements UserBusi
 
 	@Override
 	protected BaseDao<User> getBaseDao() {
-		return userDAo;
+		return userDao;
 	}
 
 
