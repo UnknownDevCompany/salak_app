@@ -1,15 +1,14 @@
 package com.bambucodev.salak.business.impl;
 
-import java.util.List;
-
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import com.bambucodev.salak.business.UserBusiness;
-import com.bambucodev.salak.dao.UserDAO;
+import com.bambucodev.salak.dao.BaseDao;
+import com.bambucodev.salak.dao.UserDao;
 import com.bambucodev.salak.model.User;
 
 /**
@@ -18,16 +17,18 @@ import com.bambucodev.salak.model.User;
  *
  */
 @Stateless
-public class UserBusinessImpl implements UserBusiness {
+public class UserBusinessImpl extends BaseBusinessImpl<User> implements UserBusiness {
 
-	private static final Logger log = LoggerFactory.getLogger(UserBusinessImpl.class);
-	
+	private static final Logger log = LogManager.getLogger();
 	@EJB
-	private UserDAO userDao;
+	protected UserDao userDao;
 
-	public List<User> getAll() throws Exception {
-		return userDao.findAll();
+	@Override
+	protected BaseDao<User> getBaseDao() {
+		return userDao;
 	}
+
+
 
 	
 
