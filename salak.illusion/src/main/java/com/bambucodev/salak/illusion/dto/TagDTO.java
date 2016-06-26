@@ -9,6 +9,10 @@ import java.util.List;
  */
 public class TagDTO implements java.io.Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 5722193101051025564L;
 	private int idTag;
 	private String name;
 	private boolean state;

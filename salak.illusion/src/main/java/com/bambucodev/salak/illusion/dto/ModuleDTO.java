@@ -9,6 +9,10 @@ import java.util.List;
  */
 public class ModuleDTO implements java.io.Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -1851486913078641432L;
 	private int idModule;
 	private String name;
 	private boolean state;

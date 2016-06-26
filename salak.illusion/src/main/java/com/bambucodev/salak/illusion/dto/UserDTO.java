@@ -6,6 +6,10 @@ package com.bambucodev.salak.illusion.dto;
  */
 public class UserDTO implements java.io.Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 5414702898303131089L;
 	private int idUser;
 	private RoleDTO role;
 	private String name;

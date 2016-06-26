@@ -6,6 +6,10 @@ package com.bambucodev.salak.illusion.dto;
  */
 public class ProductTagDTO implements java.io.Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -3105238077221990301L;
 	private int idProductTag;
 	private ProductDTO product;
 	private TagDTO tag;

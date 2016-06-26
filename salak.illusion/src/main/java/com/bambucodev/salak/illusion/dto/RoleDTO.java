@@ -9,6 +9,10 @@ import java.util.List;
  */
 public class RoleDTO implements java.io.Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -6789268300850921114L;
 	private int idRole;
 	private String name;
 	private boolean state;

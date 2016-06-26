@@ -9,6 +9,10 @@ import java.util.List;
  */
 public class ProductDTO implements java.io.Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 4093915966274600969L;
 	private int idProduct;
 	private CategoryDTO category;
 	private String name;

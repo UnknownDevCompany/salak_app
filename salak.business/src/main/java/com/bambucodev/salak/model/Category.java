@@ -26,7 +26,7 @@ public class Category implements Serializable {
 	@SequenceGenerator(name="CATEGORY_IDCATEGORY_GENERATOR", sequenceName="SE_CATEGORY")
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="CATEGORY_IDCATEGORY_GENERATOR")
 	@Column(name="id_category")
-	private Integer idCategory;
+	private Long idCategory;
 
 	private String name;
 
@@ -39,11 +39,11 @@ public class Category implements Serializable {
 	public Category() {
 	}
 
-	public Integer getIdCategory() {
+	public Long getIdCategory() {
 		return this.idCategory;
 	}
 
-	public void setIdCategory(Integer idCategory) {
+	public void setIdCategory(Long idCategory) {
 		this.idCategory = idCategory;
 	}
 

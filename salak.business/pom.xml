@@ -49,6 +49,11 @@
 		</dependency>
 
 
+		<dependency>
+			<groupId>bmbc</groupId>
+			<artifactId>salak.illusion</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 
 </project>
