@@ -9,11 +9,9 @@ import java.util.List;
  */
 public class OptionDTO implements java.io.Serializable {
 
-	/**
-	 * 
-	 */
+
 	private static final long serialVersionUID = 8679986874331000893L;
-	private int idOption;
+	private Long idOption;
 	private ModuleDTO module;
 	private String name;
 	private String value;
@@ -23,12 +21,12 @@ public class OptionDTO implements java.io.Serializable {
 	public OptionDTO() {
 	}
 
-	public OptionDTO(int idOption, ModuleDTO module) {
+	public OptionDTO(Long idOption, ModuleDTO module) {
 		this.idOption = idOption;
 		this.module = module;
 	}
 
-	public OptionDTO(int idOption, ModuleDTO module, String name, String value, Boolean state, List<RoleOptionDTO> roleOptions) {
+	public OptionDTO(Long idOption, ModuleDTO module, String name, String value, Boolean state, List<RoleOptionDTO> roleOptions) {
 		this.idOption = idOption;
 		this.module = module;
 		this.name = name;
@@ -37,11 +35,11 @@ public class OptionDTO implements java.io.Serializable {
 		this.roleOptions = roleOptions;
 	}
 
-	public int getIdOption() {
+	public Long getIdOption() {
 		return this.idOption;
 	}
 
-	public void setIdOption(int idOption) {
+	public void setIdOption(Long idOption) {
 		this.idOption = idOption;
 	}
 

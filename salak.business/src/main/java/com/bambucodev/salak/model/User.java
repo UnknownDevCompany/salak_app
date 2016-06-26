@@ -26,7 +26,7 @@ public class User implements Serializable {
 	@SequenceGenerator(name="USER_IDUSER_GENERATOR", sequenceName="SE_USER")
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="USER_IDUSER_GENERATOR")
 	@Column(name="id_user")
-	private Integer idUser;
+	private Long idUser;
 
 	@Column(name="e_mail")
 	private String eMail;
@@ -50,11 +50,11 @@ public class User implements Serializable {
 	public User() {
 	}
 
-	public Integer getIdUser() {
+	public Long getIdUser() {
 		return this.idUser;
 	}
 
-	public void setIdUser(Integer idUser) {
+	public void setIdUser(Long idUser) {
 		this.idUser = idUser;
 	}
 

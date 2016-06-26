@@ -26,7 +26,7 @@ public class Module implements Serializable {
 	@SequenceGenerator(name="MODULE_IDMODULE_GENERATOR", sequenceName="SE_MODULE")
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="MODULE_IDMODULE_GENERATOR")
 	@Column(name="id_module")
-	private Integer idModule;
+	private Long idModule;
 
 	private String name;
 
@@ -39,11 +39,11 @@ public class Module implements Serializable {
 	public Module() {
 	}
 
-	public Integer getIdModule() {
+	public Long getIdModule() {
 		return this.idModule;
 	}
 
-	public void setIdModule(Integer idModule) {
+	public void setIdModule(Long idModule) {
 		this.idModule = idModule;
 	}
 

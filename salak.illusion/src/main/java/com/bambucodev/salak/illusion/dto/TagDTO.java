@@ -9,11 +9,10 @@ import java.util.List;
  */
 public class TagDTO implements java.io.Serializable {
 
-	/**
-	 * 
-	 */
+
 	private static final long serialVersionUID = 5722193101051025564L;
-	private int idTag;
+
+	private Long idTag;
 	private String name;
 	private boolean state;
 	private List<ProductTagDTO> productTags = new ArrayList<ProductTagDTO>(0);
@@ -21,24 +20,24 @@ public class TagDTO implements java.io.Serializable {
 	public TagDTO() {
 	}
 
-	public TagDTO(int idTag, String name, boolean state) {
+	public TagDTO(Long idTag, String name, boolean state) {
 		this.idTag = idTag;
 		this.name = name;
 		this.state = state;
 	}
 
-	public TagDTO(int idTag, String name, boolean state, List<ProductTagDTO> productTags) {
+	public TagDTO(Long idTag, String name, boolean state, List<ProductTagDTO> productTags) {
 		this.idTag = idTag;
 		this.name = name;
 		this.state = state;
 		this.productTags = productTags;
 	}
 
-	public int getIdTag() {
+	public Long getIdTag() {
 		return this.idTag;
 	}
 
-	public void setIdTag(int idTag) {
+	public void setIdTag(Long idTag) {
 		this.idTag = idTag;
 	}
 

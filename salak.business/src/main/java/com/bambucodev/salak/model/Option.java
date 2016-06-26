@@ -28,7 +28,7 @@ public class Option implements Serializable {
 	@SequenceGenerator(name="OPTION_IDOPTION_GENERATOR", sequenceName="SE_OPTION")
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="OPTION_IDOPTION_GENERATOR")
 	@Column(name="id_option")
-	private Integer idOption;
+	private Long idOption;
 
 	private String name;
 
@@ -48,11 +48,11 @@ public class Option implements Serializable {
 	public Option() {
 	}
 
-	public Integer getIdOption() {
+	public Long getIdOption() {
 		return this.idOption;
 	}
 
-	public void setIdOption(Integer idOption) {
+	public void setIdOption(Long idOption) {
 		this.idOption = idOption;
 	}
 
