@@ -6,25 +6,25 @@ package com.bambucodev.salak.illusion.dto;
  */
 public class RoleOptionDTO implements java.io.Serializable {
 
-	private int idRoleOption;
+	private Long idRoleOption;
 	private OptionDTO option;
 	private RoleDTO role;
-	private int idRole;
+	private Long idRole;
 
 	public RoleOptionDTO() {
 	}
 
-	public RoleOptionDTO(OptionDTO option, RoleDTO role, int idRole) {
+	public RoleOptionDTO(OptionDTO option, RoleDTO role, Long idRole) {
 		this.option = option;
 		this.role = role;
 		this.idRole = idRole;
 	}
 
-	public int getIdRoleOption() {
+	public Long getIdRoleOption() {
 		return this.idRoleOption;
 	}
 
-	public void setIdRoleOption(int idRoleOption) {
+	public void setIdRoleOption(Long idRoleOption) {
 		this.idRoleOption = idRoleOption;
 	}
 
@@ -44,11 +44,11 @@ public class RoleOptionDTO implements java.io.Serializable {
 		this.role = role;
 	}
 
-	public int getIdRole() {
+	public Long getIdRole() {
 		return this.idRole;
 	}
 
-	public void setIdRole(int idRole) {
+	public void setIdRole(Long idRole) {
 		this.idRole = idRole;
 	}
 

@@ -26,7 +26,7 @@ public class Tag implements Serializable {
 	@SequenceGenerator(name="TAG_IDTAG_GENERATOR", sequenceName="SE_TAG")
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="TAG_IDTAG_GENERATOR")
 	@Column(name="id_tag")
-	private Integer idTag;
+	private Long idTag;
 
 	private String name;
 
@@ -39,11 +39,11 @@ public class Tag implements Serializable {
 	public Tag() {
 	}
 
-	public Integer getIdTag() {
+	public Long getIdTag() {
 		return this.idTag;
 	}
 
-	public void setIdTag(Integer idTag) {
+	public void setIdTag(Long idTag) {
 		this.idTag = idTag;
 	}
 

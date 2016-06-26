@@ -9,7 +9,7 @@ import java.util.List;
  */
 public class ModuleDTO implements java.io.Serializable {
 
-	private int idModule;
+	private Long idModule;
 	private String name;
 	private boolean state;
 	private List<OptionDTO> options = new ArrayList<OptionDTO>(0);
@@ -17,24 +17,24 @@ public class ModuleDTO implements java.io.Serializable {
 	public ModuleDTO() {
 	}
 
-	public ModuleDTO(int idModule, String name, boolean state) {
+	public ModuleDTO(Long idModule, String name, boolean state) {
 		this.idModule = idModule;
 		this.name = name;
 		this.state = state;
 	}
 
-	public ModuleDTO(int idModule, String name, boolean state, List<OptionDTO> options) {
+	public ModuleDTO(Long idModule, String name, boolean state, List<OptionDTO> options) {
 		this.idModule = idModule;
 		this.name = name;
 		this.state = state;
 		this.options = options;
 	}
 
-	public int getIdModule() {
+	public Long getIdModule() {
 		return this.idModule;
 	}
 
-	public void setIdModule(int idModule) {
+	public void setIdModule(Long idModule) {
 		this.idModule = idModule;
 	}
 

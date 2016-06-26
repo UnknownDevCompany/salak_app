@@ -6,7 +6,7 @@ package com.bambucodev.salak.illusion.dto;
  */
 public class UserDTO implements java.io.Serializable {
 
-	private int idUser;
+	private Long idUser;
 	private RoleDTO role;
 	private String name;
 	private String lastName;
@@ -18,13 +18,13 @@ public class UserDTO implements java.io.Serializable {
 	public UserDTO() {
 	}
 
-	public UserDTO(int idUser, RoleDTO role, String login) {
+	public UserDTO(Long idUser, RoleDTO role, String login) {
 		this.idUser = idUser;
 		this.role = role;
 		this.login = login;
 	}
 
-	public UserDTO(int idUser, RoleDTO role, String name, String lastName, String login, String password, String EMail,
+	public UserDTO(Long idUser, RoleDTO role, String name, String lastName, String login, String password, String EMail,
 			Boolean state) {
 		this.idUser = idUser;
 		this.role = role;
@@ -36,11 +36,11 @@ public class UserDTO implements java.io.Serializable {
 		this.state = state;
 	}
 
-	public int getIdUser() {
+	public Long getIdUser() {
 		return this.idUser;
 	}
 
-	public void setIdUser(int idUser) {
+	public void setIdUser(Long idUser) {
 		this.idUser = idUser;
 	}
 

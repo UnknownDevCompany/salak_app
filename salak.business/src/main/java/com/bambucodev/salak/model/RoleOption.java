@@ -29,10 +29,10 @@ public class RoleOption implements Serializable {
 	@SequenceGenerator(name="ROLE_OPTION_IDROLEOPTION_GENERATOR", sequenceName="SE_ROLE_OPTION")
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="ROLE_OPTION_IDROLEOPTION_GENERATOR")
 	@Column(name="id_role_option")
-	private Integer idRoleOption;
+	private Long idRoleOption;
 
 	@Column(name="id_role")
-	private Integer idRole;
+	private Long idRole;
 
 	//bi-directional many-to-one association to Option
 	@ManyToOne
@@ -47,19 +47,19 @@ public class RoleOption implements Serializable {
 	public RoleOption() {
 	}
 
-	public Integer getIdRoleOption() {
+	public Long getIdRoleOption() {
 		return this.idRoleOption;
 	}
 
-	public void setIdRoleOption(Integer idRoleOption) {
+	public void setIdRoleOption(Long idRoleOption) {
 		this.idRoleOption = idRoleOption;
 	}
 
-	public Integer getIdRole() {
+	public Long getIdRole() {
 		return this.idRole;
 	}
 
-	public void setIdRole(Integer idRole) {
+	public void setIdRole(Long idRole) {
 		this.idRole = idRole;
 	}
 

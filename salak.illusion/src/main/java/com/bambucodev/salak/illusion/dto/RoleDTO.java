@@ -9,7 +9,7 @@ import java.util.List;
  */
 public class RoleDTO implements java.io.Serializable {
 
-	private int idRole;
+	private Long idRole;
 	private String name;
 	private boolean state;
 	private String description;
@@ -19,13 +19,13 @@ public class RoleDTO implements java.io.Serializable {
 	public RoleDTO() {
 	}
 
-	public RoleDTO(int idRole, String name, boolean state) {
+	public RoleDTO(Long idRole, String name, boolean state) {
 		this.idRole = idRole;
 		this.name = name;
 		this.state = state;
 	}
 
-	public RoleDTO(int idRole, String name, boolean state, String description, RoleOptionDTO roleOption, List<UserDTO> users) {
+	public RoleDTO(Long idRole, String name, boolean state, String description, RoleOptionDTO roleOption, List<UserDTO> users) {
 		this.idRole = idRole;
 		this.name = name;
 		this.state = state;
@@ -34,11 +34,11 @@ public class RoleDTO implements java.io.Serializable {
 		this.users = users;
 	}
 
-	public int getIdRole() {
+	public Long getIdRole() {
 		return this.idRole;
 	}
 
-	public void setIdRole(int idRole) {
+	public void setIdRole(Long idRole) {
 		this.idRole = idRole;
 	}
 

@@ -9,7 +9,7 @@ import java.util.List;
  */
 public class ProductDTO implements java.io.Serializable {
 
-	private int idProduct;
+	private Long idProduct;
 	private CategoryDTO category;
 	private String name;
 	private String description;
@@ -20,7 +20,7 @@ public class ProductDTO implements java.io.Serializable {
 	public ProductDTO() {
 	}
 
-	public ProductDTO(int idProduct, CategoryDTO category, String name, String description, boolean state) {
+	public ProductDTO(Long idProduct, CategoryDTO category, String name, String description, boolean state) {
 		this.idProduct = idProduct;
 		this.category = category;
 		this.name = name;
@@ -28,7 +28,7 @@ public class ProductDTO implements java.io.Serializable {
 		this.state = state;
 	}
 
-	public ProductDTO(int idProduct, CategoryDTO category, String name, String description, Integer price, boolean state,
+	public ProductDTO(Long idProduct, CategoryDTO category, String name, String description, Integer price, boolean state,
 			List<ProductTagDTO> productTags) {
 		this.idProduct = idProduct;
 		this.category = category;
@@ -39,11 +39,11 @@ public class ProductDTO implements java.io.Serializable {
 		this.productTags = productTags;
 	}
 
-	public int getIdProduct() {
+	public Long getIdProduct() {
 		return this.idProduct;
 	}
 
-	public void setIdProduct(int idProduct) {
+	public void setIdProduct(Long idProduct) {
 		this.idProduct = idProduct;
 	}
 

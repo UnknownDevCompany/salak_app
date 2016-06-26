@@ -6,24 +6,24 @@ package com.bambucodev.salak.illusion.dto;
  */
 public class ProductTagDTO implements java.io.Serializable {
 
-	private int idProductTag;
+	private Long idProductTag;
 	private ProductDTO product;
 	private TagDTO tag;
 
 	public ProductTagDTO() {
 	}
 
-	public ProductTagDTO(int idProductTag, ProductDTO product, TagDTO tag) {
+	public ProductTagDTO(Long idProductTag, ProductDTO product, TagDTO tag) {
 		this.idProductTag = idProductTag;
 		this.product = product;
 		this.tag = tag;
 	}
 
-	public int getIdProductTag() {
+	public Long getIdProductTag() {
 		return this.idProductTag;
 	}
 
-	public void setIdProductTag(int idProductTag) {
+	public void setIdProductTag(Long idProductTag) {
 		this.idProductTag = idProductTag;
 	}
 

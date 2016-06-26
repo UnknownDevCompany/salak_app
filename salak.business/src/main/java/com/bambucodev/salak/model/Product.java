@@ -28,7 +28,7 @@ public class Product implements Serializable {
 	@SequenceGenerator(name="PRODUCT_IDPRODUCT_GENERATOR", sequenceName="SE_PRODUCT")
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="PRODUCT_IDPRODUCT_GENERATOR")
 	@Column(name="id_product")
-	private Integer idProduct;
+	private Long idProduct;
 
 	private String description;
 
@@ -50,11 +50,11 @@ public class Product implements Serializable {
 	public Product() {
 	}
 
-	public Integer getIdProduct() {
+	public Long getIdProduct() {
 		return this.idProduct;
 	}
 
-	public void setIdProduct(Integer idProduct) {
+	public void setIdProduct(Long idProduct) {
 		this.idProduct = idProduct;
 	}
 

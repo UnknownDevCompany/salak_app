@@ -28,7 +28,7 @@ public class ProductTag implements Serializable {
 	@SequenceGenerator(name="PRODUCT_TAG_IDPRODUCTTAG_GENERATOR", sequenceName="SE_PRODUCT_TAG")
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="PRODUCT_TAG_IDPRODUCTTAG_GENERATOR")
 	@Column(name="id_product_tag")
-	private Integer idProductTag;
+	private Long idProductTag;
 
 	//bi-directional many-to-one association to Product
 	@ManyToOne
@@ -43,11 +43,11 @@ public class ProductTag implements Serializable {
 	public ProductTag() {
 	}
 
-	public Integer getIdProductTag() {
+	public Long getIdProductTag() {
 		return this.idProductTag;
 	}
 
-	public void setIdProductTag(Integer idProductTag) {
+	public void setIdProductTag(Long idProductTag) {
 		this.idProductTag = idProductTag;
 	}
 
